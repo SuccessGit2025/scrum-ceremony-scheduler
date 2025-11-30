@@ -1,0 +1,60 @@
+{
+  "sprintDurationWeeks": 3,
+  "ceremonies": {
+    "sprintPlanning": {
+      "name": "Sprint Planning",
+      "dayOffset": 0,
+      "timeOfDay": "09:00",
+      "durationMinutes": 120,
+      "attendeeType": "team",
+      "description": "Plan the sprint work",
+      "agenda": [
+        "Review sprint goal",
+        "Select backlog items",
+        "Break down tasks",
+        "Estimate effort"
+      ]
+    },
+    "dailyStandup": {
+      "name": "Daily Standup",
+      "dayOffset": 0,
+      "timeOfDay": "09:30",
+      "durationMinutes": 15,
+      "attendeeType": "team",
+      "description": "Daily synchronization",
+      "agenda": [
+        "What did I complete yesterday?",
+        "What will I work on today?",
+        "Any blockers?"
+      ]
+    },
+    "sprintReview": {
+      "name": "Sprint Review",
+      "dayOffset": -2,
+      "timeOfDay": "14:00",
+      "durationMinutes": 60,
+      "attendeeType": "team-and-stakeholders",
+      "description": "Demonstrate completed work",
+      "agenda": [
+        "Demo completed stories",
+        "Gather feedback",
+        "Update backlog"
+      ]
+    },
+    "sprintRetrospective": {
+      "name": "Sprint Retrospective",
+      "dayOffset": 0,
+      "timeOfDay": "15:30",
+      "durationMinutes": 90,
+      "attendeeType": "team",
+      "description": "Reflect and improve",
+      "agenda": [
+        "What went well?",
+        "What could be improved?",
+        "Action items"
+      ]
+    }
+  },
+  "holidays": [],
+  "workingDays": ["monday", "tuesday", "wednesday", "thursday", "friday"]
+}

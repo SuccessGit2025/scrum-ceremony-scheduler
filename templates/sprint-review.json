@@ -1,0 +1,14 @@
+{
+  "ceremonyType": "sprint-review",
+  "title": "Sprint Review - Sprint {{sprint_number}}",
+  "description": "Sprint Review for Sprint {{sprint_number}}\n\nRelease Date: {{release_date}}\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved",
+  "agenda": [
+    "Review sprint goal and objectives",
+    "Demonstrate completed user stories",
+    "Review sprint metrics (velocity, burndown)",
+    "Gather stakeholder feedback",
+    "Discuss upcoming priorities",
+    "Update product backlog based on feedback"
+  ],
+  "variables": ["sprint_number", "release_date"]
+}

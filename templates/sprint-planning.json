@@ -1,0 +1,14 @@
+{
+  "ceremonyType": "sprint-planning",
+  "title": "Sprint Planning - Sprint {{sprint_number}}",
+  "description": "Sprint Planning ceremony for Sprint {{sprint_number}}\n\nRelease Date: {{release_date}}\nSprint Duration: {{sprint_start}} to {{sprint_end}}\n\nIn this session, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.",
+  "agenda": [
+    "Review sprint goal and objectives",
+    "Review and refine product backlog items",
+    "Team selects items for the sprint",
+    "Break down selected items into tasks",
+    "Estimate effort and capacity",
+    "Finalize sprint commitment"
+  ],
+  "variables": ["sprint_number", "release_date", "sprint_start", "sprint_end"]
+}

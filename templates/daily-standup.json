@@ -1,0 +1,11 @@
+{
+  "ceremonyType": "daily-standup",
+  "title": "Daily Standup - Sprint {{sprint_number}}",
+  "description": "Daily Standup for Sprint {{sprint_number}}\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.",
+  "agenda": [
+    "What did I complete yesterday?",
+    "What will I work on today?",
+    "Are there any blockers or impediments?"
+  ],
+  "variables": ["sprint_number"]
+}

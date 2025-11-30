@@ -1,0 +1,354 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Scrum Ceremony Scheduler//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:d0416eb8-0eee-4ee3-b69a-0579208f8dcc
+DTSTART:20191228T090000
+DTEND:20191228T110000
+SUMMARY:Sprint Planning - Sprint 1
+DESCRIPTION:Sprint Planning ceremony for Sprint 1\n\nRelease Date: 2020-01-18\nSprint Duration: 2019-12-28 to 2020-01-17\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:3dab5f79-f219-41ff-91a6-4bed40c5de74
+DTSTART:20191230T093000
+DTEND:20191230T094500
+SUMMARY:Daily Standup - Sprint 1
+DESCRIPTION:Daily Standup for Sprint 1\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20200117T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:ec3294e5-7d8f-44a3-996f-d6b3dffd36a0
+DTSTART:20200116T140000
+DTEND:20200116T150000
+SUMMARY:Sprint Review - Sprint 1
+DESCRIPTION:Sprint Review for Sprint 1\n\nRelease Date: 2020-01-18\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:1fd18eec-891f-4be2-bb27-6046556cfdd2
+DTSTART:20200118T153000
+DTEND:20200118T170000
+SUMMARY:Sprint Retrospective - Sprint 1
+DESCRIPTION:Sprint Retrospective for Sprint 1\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+BEGIN:VEVENT
+UID:0a0dff91-f567-4c87-b9b0-6cd55866fb80
+DTSTART:20200125T090000
+DTEND:20200125T110000
+SUMMARY:Sprint Planning - Sprint 2
+DESCRIPTION:Sprint Planning ceremony for Sprint 2\n\nRelease Date: 2020-02-15\nSprint Duration: 2020-01-25 to 2020-02-14\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:9339be1b-d56a-40c9-b44a-1f02c56c94eb
+DTSTART:20200127T093000
+DTEND:20200127T094500
+SUMMARY:Daily Standup - Sprint 2
+DESCRIPTION:Daily Standup for Sprint 2\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20200214T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:59621c20-fe52-49d9-98e1-0535822babf5
+DTSTART:20200213T140000
+DTEND:20200213T150000
+SUMMARY:Sprint Review - Sprint 2
+DESCRIPTION:Sprint Review for Sprint 2\n\nRelease Date: 2020-02-15\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:6873b87e-cd6a-4a78-b3dd-b8d9e54e3984
+DTSTART:20200215T153000
+DTEND:20200215T170000
+SUMMARY:Sprint Retrospective - Sprint 2
+DESCRIPTION:Sprint Retrospective for Sprint 2\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+BEGIN:VEVENT
+UID:3bb1385b-f5bc-4e37-b4c2-9177d7f55d00
+DTSTART:20200229T090000
+DTEND:20200229T110000
+SUMMARY:Sprint Planning - Sprint 3
+DESCRIPTION:Sprint Planning ceremony for Sprint 3\n\nRelease Date: 2020-03-21\nSprint Duration: 2020-02-29 to 2020-03-20\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:5089df9e-0a3d-476d-a386-74019ba3a83e
+DTSTART:20200302T093000
+DTEND:20200302T094500
+SUMMARY:Daily Standup - Sprint 3
+DESCRIPTION:Daily Standup for Sprint 3\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20200320T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:b39033c8-9da9-409e-ad1d-b57146cd3fa7
+DTSTART:20200319T140000
+DTEND:20200319T150000
+SUMMARY:Sprint Review - Sprint 3
+DESCRIPTION:Sprint Review for Sprint 3\n\nRelease Date: 2020-03-21\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:a5375c39-cae1-4c09-bf2c-026639a0ab67
+DTSTART:20200321T153000
+DTEND:20200321T170000
+SUMMARY:Sprint Retrospective - Sprint 3
+DESCRIPTION:Sprint Retrospective for Sprint 3\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+BEGIN:VEVENT
+UID:af1a056b-8afb-4109-82d5-0bddcd5702bd
+DTSTART:20200328T090000
+DTEND:20200328T110000
+SUMMARY:Sprint Planning - Sprint 4
+DESCRIPTION:Sprint Planning ceremony for Sprint 4\n\nRelease Date: 2020-04-18\nSprint Duration: 2020-03-28 to 2020-04-17\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:39eb6cab-6138-4cd2-a96f-2b1950a989a1
+DTSTART:20200330T093000
+DTEND:20200330T094500
+SUMMARY:Daily Standup - Sprint 4
+DESCRIPTION:Daily Standup for Sprint 4\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20200417T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:428c12b9-26e5-4da4-af9d-6e3e76e6b004
+DTSTART:20200416T140000
+DTEND:20200416T150000
+SUMMARY:Sprint Review - Sprint 4
+DESCRIPTION:Sprint Review for Sprint 4\n\nRelease Date: 2020-04-18\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:8baf0319-1d09-4625-8134-b3deaf178681
+DTSTART:20200418T153000
+DTEND:20200418T170000
+SUMMARY:Sprint Retrospective - Sprint 4
+DESCRIPTION:Sprint Retrospective for Sprint 4\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+BEGIN:VEVENT
+UID:c4277b86-2d4a-4223-b97f-2395a3a27616
+DTSTART:20200425T090000
+DTEND:20200425T110000
+SUMMARY:Sprint Planning - Sprint 5
+DESCRIPTION:Sprint Planning ceremony for Sprint 5\n\nRelease Date: 2020-05-16\nSprint Duration: 2020-04-25 to 2020-05-15\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:0b6d7bc9-8afa-40f1-a436-888314fc7fd1
+DTSTART:20200427T093000
+DTEND:20200427T094500
+SUMMARY:Daily Standup - Sprint 5
+DESCRIPTION:Daily Standup for Sprint 5\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20200515T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:642a9f60-44c2-43b9-a159-bee01d0b615d
+DTSTART:20200514T140000
+DTEND:20200514T150000
+SUMMARY:Sprint Review - Sprint 5
+DESCRIPTION:Sprint Review for Sprint 5\n\nRelease Date: 2020-05-16\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:097ecf30-5cb2-4f38-845c-9ef305d16160
+DTSTART:20200516T153000
+DTEND:20200516T170000
+SUMMARY:Sprint Retrospective - Sprint 5
+DESCRIPTION:Sprint Retrospective for Sprint 5\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+BEGIN:VEVENT
+UID:66dbf0bc-13dd-4021-9c3e-dd83338e54ab
+DTSTART:20200530T090000
+DTEND:20200530T110000
+SUMMARY:Sprint Planning - Sprint 6
+DESCRIPTION:Sprint Planning ceremony for Sprint 6\n\nRelease Date: 2020-06-20\nSprint Duration: 2020-05-30 to 2020-06-19\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:276be46b-1b24-4de0-9651-92c3e3160f7e
+DTSTART:20200601T093000
+DTEND:20200601T094500
+SUMMARY:Daily Standup - Sprint 6
+DESCRIPTION:Daily Standup for Sprint 6\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20200619T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:3da951d9-b5cd-474b-8403-5ebf6a204419
+DTSTART:20200618T140000
+DTEND:20200618T150000
+SUMMARY:Sprint Review - Sprint 6
+DESCRIPTION:Sprint Review for Sprint 6\n\nRelease Date: 2020-06-20\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:df4eae41-6b23-41dd-ba95-9234f5b51af9
+DTSTART:20200620T153000
+DTEND:20200620T170000
+SUMMARY:Sprint Retrospective - Sprint 6
+DESCRIPTION:Sprint Retrospective for Sprint 6\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+BEGIN:VEVENT
+UID:d3ef2f19-5eba-4130-9f19-3c47ee752908
+DTSTART:20200627T090000
+DTEND:20200627T110000
+SUMMARY:Sprint Planning - Sprint 7
+DESCRIPTION:Sprint Planning ceremony for Sprint 7\n\nRelease Date: 2020-07-18\nSprint Duration: 2020-06-27 to 2020-07-17\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:759fd724-3475-418a-899e-4297c7fb9bf8
+DTSTART:20200629T093000
+DTEND:20200629T094500
+SUMMARY:Daily Standup - Sprint 7
+DESCRIPTION:Daily Standup for Sprint 7\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20200717T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:88e4ce8c-bdd0-4ca6-bb35-a6aac072bc50
+DTSTART:20200716T140000
+DTEND:20200716T150000
+SUMMARY:Sprint Review - Sprint 7
+DESCRIPTION:Sprint Review for Sprint 7\n\nRelease Date: 2020-07-18\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:55b84c73-2210-4d55-97c5-9120138eda0a
+DTSTART:20200718T153000
+DTEND:20200718T170000
+SUMMARY:Sprint Retrospective - Sprint 7
+DESCRIPTION:Sprint Retrospective for Sprint 7\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+BEGIN:VEVENT
+UID:927c243e-1a90-41e1-90e1-4afb3cb32701
+DTSTART:20200725T090000
+DTEND:20200725T110000
+SUMMARY:Sprint Planning - Sprint 8
+DESCRIPTION:Sprint Planning ceremony for Sprint 8\n\nRelease Date: 2020-08-15\nSprint Duration: 2020-07-25 to 2020-08-14\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:16379bdf-95bf-4a34-abc1-e1a9a5bc705f
+DTSTART:20200727T093000
+DTEND:20200727T094500
+SUMMARY:Daily Standup - Sprint 8
+DESCRIPTION:Daily Standup for Sprint 8\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20200814T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:279bf0a6-a2eb-46ef-b5e5-7135bdec339b
+DTSTART:20200813T140000
+DTEND:20200813T150000
+SUMMARY:Sprint Review - Sprint 8
+DESCRIPTION:Sprint Review for Sprint 8\n\nRelease Date: 2020-08-15\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:228ddd6a-41c0-47dd-b6f6-f53d0a1f2c01
+DTSTART:20200815T153000
+DTEND:20200815T170000
+SUMMARY:Sprint Retrospective - Sprint 8
+DESCRIPTION:Sprint Retrospective for Sprint 8\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+BEGIN:VEVENT
+UID:7c926081-ad84-45a1-8609-ded7f8302e35
+DTSTART:20200829T090000
+DTEND:20200829T110000
+SUMMARY:Sprint Planning - Sprint 9
+DESCRIPTION:Sprint Planning ceremony for Sprint 9\n\nRelease Date: 2020-09-19\nSprint Duration: 2020-08-29 to 2020-09-18\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:6cc59362-a131-4538-b08a-31b32b7db403
+DTSTART:20200831T093000
+DTEND:20200831T094500
+SUMMARY:Daily Standup - Sprint 9
+DESCRIPTION:Daily Standup for Sprint 9\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20200918T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:4f0b5267-9f25-4b63-8265-37a4dc3dcfb3
+DTSTART:20200917T140000
+DTEND:20200917T150000
+SUMMARY:Sprint Review - Sprint 9
+DESCRIPTION:Sprint Review for Sprint 9\n\nRelease Date: 2020-09-19\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:bba99d9c-d0c1-4fe9-ae52-7e1e73210cd3
+DTSTART:20200919T153000
+DTEND:20200919T170000
+SUMMARY:Sprint Retrospective - Sprint 9
+DESCRIPTION:Sprint Retrospective for Sprint 9\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+BEGIN:VEVENT
+UID:a90f10f7-93fd-48a6-baa9-c4c05895742a
+DTSTART:20200926T090000
+DTEND:20200926T110000
+SUMMARY:Sprint Planning - Sprint 10
+DESCRIPTION:Sprint Planning ceremony for Sprint 10\n\nRelease Date: 2020-10-17\nSprint Duration: 2020-09-26 to 2020-10-16\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:8418b1f0-9c02-4e72-97ef-1df0d33d1b9e
+DTSTART:20200928T093000
+DTEND:20200928T094500
+SUMMARY:Daily Standup - Sprint 10
+DESCRIPTION:Daily Standup for Sprint 10\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20201016T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:52351d0b-0a0d-45d3-a9e2-81771ef81b78
+DTSTART:20201015T140000
+DTEND:20201015T150000
+SUMMARY:Sprint Review - Sprint 10
+DESCRIPTION:Sprint Review for Sprint 10\n\nRelease Date: 2020-10-17\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:7314ffe1-1a7d-4ec5-b0b0-ce917ef53d2e
+DTSTART:20201017T153000
+DTEND:20201017T170000
+SUMMARY:Sprint Retrospective - Sprint 10
+DESCRIPTION:Sprint Retrospective for Sprint 10\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+BEGIN:VEVENT
+UID:63f79018-62e3-4a7f-948c-4e0b57044b94
+DTSTART:20201031T090000
+DTEND:20201031T110000
+SUMMARY:Sprint Planning - Sprint 11
+DESCRIPTION:Sprint Planning ceremony for Sprint 11\n\nRelease Date: 2020-11-21\nSprint Duration: 2020-10-31 to 2020-11-20\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:32c5add4-8fa2-44fd-9b25-efff8efed027
+DTSTART:20201102T093000
+DTEND:20201102T094500
+SUMMARY:Daily Standup - Sprint 11
+DESCRIPTION:Daily Standup for Sprint 11\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20201120T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:957afa9a-6653-4a27-abe0-5adec7b11f84
+DTSTART:20201119T140000
+DTEND:20201119T150000
+SUMMARY:Sprint Review - Sprint 11
+DESCRIPTION:Sprint Review for Sprint 11\n\nRelease Date: 2020-11-21\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:ef8ccb17-1026-4d44-a29d-b226be43eaef
+DTSTART:20201121T153000
+DTEND:20201121T170000
+SUMMARY:Sprint Retrospective - Sprint 11
+DESCRIPTION:Sprint Retrospective for Sprint 11\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+BEGIN:VEVENT
+UID:f6cda83a-2924-4c50-aabd-f67329f58fb8
+DTSTART:20201128T090000
+DTEND:20201128T110000
+SUMMARY:Sprint Planning - Sprint 12
+DESCRIPTION:Sprint Planning ceremony for Sprint 12\n\nRelease Date: 2020-12-19\nSprint Duration: 2020-11-28 to 2020-12-18\n\nIn this session\, the team will plan the work for the upcoming sprint by selecting items from the product backlog and creating a sprint backlog.\n\nAgenda:\n1. Review sprint goal and objectives\n2. Review and refine product backlog items\n3. Team selects items for the sprint\n4. Break down selected items into tasks\n5. Estimate effort and capacity\n6. Finalize sprint commitment\n
+END:VEVENT
+BEGIN:VEVENT
+UID:79f384c9-3d5b-4010-88c0-7c1a65c0311c
+DTSTART:20201130T093000
+DTEND:20201130T094500
+SUMMARY:Daily Standup - Sprint 12
+DESCRIPTION:Daily Standup for Sprint 12\n\nA brief daily synchronization meeting to keep the team aligned and identify any blockers.\n\nTime-boxed to 15 minutes.\n\nAgenda:\n1. What did I complete yesterday?\n2. What will I work on today?\n3. Are there any blockers or impediments?\n
+RRULE:FREQ=DAILY;UNTIL=20201218T235959
+END:VEVENT
+BEGIN:VEVENT
+UID:1d24016b-983c-4b54-81cf-d2b7c77b05db
+DTSTART:20201217T140000
+DTEND:20201217T150000
+SUMMARY:Sprint Review - Sprint 12
+DESCRIPTION:Sprint Review for Sprint 12\n\nRelease Date: 2020-12-19\n\nThe team will demonstrate completed work to stakeholders and gather feedback.\n\nDemonstration Guidelines:\n- Show working software\, not presentations\n- Focus on completed items that meet the Definition of Done\n- Gather feedback from stakeholders\n- Discuss what went well and what could be improved\n\nAgenda:\n1. Review sprint goal and objectives\n2. Demonstrate completed user stories\n3. Review sprint metrics (velocity\, burndown)\n4. Gather stakeholder feedback\n5. Discuss upcoming priorities\n6. Update product backlog based on feedback\n
+END:VEVENT
+BEGIN:VEVENT
+UID:afc57078-9d52-40fd-ba97-7d885171e4d6
+DTSTART:20201219T153000
+DTEND:20201219T170000
+SUMMARY:Sprint Retrospective - Sprint 12
+DESCRIPTION:Sprint Retrospective for Sprint 12\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process\, not individuals\n- Identify actionable improvements\n- Follow up on previous action items\n\nAgenda:\n1. Review previous retrospective action items\n2. What went well during the sprint?\n3. What could be improved?\n4. What will we commit to improving in the next sprint?\n5. Define specific action items with owners\n6. Close with appreciations\n
+END:VEVENT
+END:VCALENDAR

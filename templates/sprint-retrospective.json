@@ -1,0 +1,14 @@
+{
+  "ceremonyType": "sprint-retrospective",
+  "title": "Sprint Retrospective - Sprint {{sprint_number}}",
+  "description": "Sprint Retrospective for Sprint {{sprint_number}}\n\nA team-only session to reflect on the sprint and identify process improvements.\n\nRetrospective format guidelines:\n- Create a safe environment for open discussion\n- Focus on the process, not individuals\n- Identify actionable improvements\n- Follow up on previous action items",
+  "agenda": [
+    "Review previous retrospective action items",
+    "What went well during the sprint?",
+    "What could be improved?",
+    "What will we commit to improving in the next sprint?",
+    "Define specific action items with owners",
+    "Close with appreciations"
+  ],
+  "variables": ["sprint_number"]
+}
