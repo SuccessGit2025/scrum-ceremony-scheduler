@@ -2,9 +2,19 @@
 
 Automated calendar invite generator for Scrum ceremonies aligned with monthly release cadence.
 
+## 🌐 Web Interface Available!
+
+**Quick Start**: Open `web/index.html` in your browser for a user-friendly interface - no installation required!
+
+Or try it online: [Deploy to GitHub Pages, Netlify, or Vercel](./web/README.md)
+
 ## Overview
 
 The Scrum Ceremony Scheduler automatically generates calendar invites for all four core Scrum ceremonies (Sprint Planning, Daily Standup, Sprint Review, and Sprint Retrospective) based on a monthly release schedule where releases occur on the third Saturday of each month.
+
+**Two ways to use:**
+1. **Web Interface** (Recommended for most users) - Simple browser-based UI
+2. **CLI Tool** (For automation and advanced users) - Command-line interface
 
 ## Features
 
@@ -17,14 +27,25 @@ The Scrum Ceremony Scheduler automatically generates calendar invites for all fo
 - ✅ iCalendar (RFC 5545) export format
 - ✅ Property-based testing for correctness
 
-## Installation
+## Quick Start
+
+### Web Interface (Easiest)
+
+1. Open `web/index.html` in your browser
+2. Configure your sprint settings
+3. Click "Preview" to see the schedule
+4. Click "Download .ics" to get your calendar file
+
+See [web/README.md](./web/README.md) for deployment options.
+
+### CLI Tool
+
+Install dependencies:
 
 ```bash
 npm install
 npm run build
 ```
-
-## Quick Start
 
 Generate ceremonies for the current year:
 

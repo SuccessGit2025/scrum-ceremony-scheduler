@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrum Ceremony Scheduler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .form-section, .preview-section {
+            padding: 20px;
+        }
+        
+        .form-section {
+            border-right: 2px solid #f0f0f0;
+        }
+        
+        @media (max-width: 768px) {
+            .form-section {
+                border-right: none;
+                border-bottom: 2px solid #f0f0f0;
+            }
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        input[type="number"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .error {
+            color: #e74c3c;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+        }
+        
+        .radio-group input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        
+        .ceremony-config {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        
+        .ceremony-config h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .ceremony-fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-right: 10px;
+        }
+        
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .preview-section {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        .sprint-group {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        
+        .sprint-group h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .ceremony-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: white;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+        
+        .ceremony-item.conflict {
+            border-left-color: #e74c3c;
+            background: #fee;
+        }
+        
+        .ceremony-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .ceremony-details {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗓️ Scrum Ceremony Scheduler</h1>
+            <p>Generate calendar invites for your Scrum ceremonies</p>
+        </div>
+        
+        <div class="content">
+            <div class="form-section">
+                <h2>Configuration</h2>
+                
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <input type="number" id="year" min="2020" max="2100" value="2026" placeholder="e.g., 2026">
+                    <div class="error" id="year-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Sprint Duration</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="sprintDuration" value="2" checked>
+                            2 weeks
+                        </label>
+                        <label>
+                            <input type="radio" name="sprintDuration" value="3">
+                            3 weeks
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="numSprints">Number of Sprints</label>
+                    <input type="number" id="numSprints" min="1" max="24" value="6" placeholder="e.g., 6">
+                    <div class="error" id="numSprints-error"></div>
+                </div>
+                
+                <div class="ceremony-config">
+                    <h3>Sprint Planning</h3>
+                    <div class="ceremony-fields">
+                        <div>
+                            <label for="sp-time">Time</label>
+                            <input type="text" id="sp-time" value="10:00" placeholder="HH:MM">
+                        </div>
+                        <div>
+                            <label for="sp-duration">Duration (min)</label>
+                            <input type="number" id="sp-duration" value="120" min="15">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ceremony-config">
+                    <h3>Daily Standup</h3>
+                    <div class="ceremony-fields">
+                        <div>
+                            <label for="ds-time">Time</label>
+                            <input type="text" id="ds-time" value="09:30" placeholder="HH:MM">
+                        </div>
+                        <div>
+                            <label for="ds-duration">Duration (min)</label>
+                            <input type="number" id="ds-duration" value="15" min="15">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ceremony-config">
+                    <h3>Sprint Review</h3>
+                    <div class="ceremony-fields">
+                        <div>
+                            <label for="sr-time">Time</label>
+                            <input type="text" id="sr-time" value="14:00" placeholder="HH:MM">
+                        </div>
+                        <div>
+                            <label for="sr-duration">Duration (min)</label>
+                            <input type="number" id="sr-duration" value="60" min="15">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ceremony-config">
+                    <h3>Sprint Retrospective</h3>
+                    <div class="ceremony-fields">
+                        <div>
+                            <label for="sret-time">Time</label>
+                            <input type="text" id="sret-time" value="15:00" placeholder="HH:MM">
+                        </div>
+                        <div>
+                            <label for="sret-duration">Duration (min)</label>
+                            <input type="number" id="sret-duration" value="45" min="15">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="holidays">Holidays (comma-separated YYYY-MM-DD)</label>
+                    <input type="text" id="holidays" placeholder="e.g., 2026-01-01, 2026-12-25">
+                    <div class="error" id="holidays-error"></div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" id="previewBtn">Preview</button>
+                    <button class="btn btn-primary" id="downloadBtn" disabled>Download .ics</button>
+                    <button class="btn btn-secondary" id="resetBtn">Reset</button>
+                </div>
+                
+                <div class="success-message" id="successMessage">
+                    Calendar file downloaded successfully!
+                </div>
+            </div>
+            
+            <div class="preview-section">
+                <h2>Preview</h2>
+                <div id="preview">
+                    <div class="empty-state">
+                        <p>Click "Preview" to see your ceremony schedule</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Core date calculation functions
+        function calculateThirdSaturday(year, month) {
+            const firstDay = new Date(year, month - 1, 1);
+            const firstDayOfWeek = firstDay.getDay();
+            const daysUntilFirstSaturday = (6 - firstDayOfWeek + 7) % 7;
+            const thirdSaturdayDay = 1 + daysUntilFirstSaturday + 14;
+            return new Date(year, month - 1, thirdSaturdayDay);
+        }
+
+        function isWorkingDay(date, holidays) {
+            const dayOfWeek = date.getDay();
+            if (dayOfWeek === 0 || dayOfWeek === 6) return false;
+            
+            const dateStr = date.toISOString().split('T')[0];
+            return !holidays.some(h => h.toISOString().split('T')[0] === dateStr);
+        }
+
+        function getWorkingDays(startDate, endDate, holidays) {
+            const workingDays = [];
+            const current = new Date(startDate);
+            while (current <= endDate) {
+                if (isWorkingDay(current, holidays)) {
+                    workingDays.push(new Date(current));
+                }
+                current.setDate(current.getDate() + 1);
+            }
+            return workingDays;
+        }
+
+
+        function calculateSprintStart(releaseDate, durationWeeks) {
+            const start = new Date(releaseDate);
+            start.setDate(start.getDate() - (durationWeeks * 7));
+            return start;
+        }
+
+        function calculateSprintEnd(sprintStart, durationWeeks) {
+            const end = new Date(sprintStart);
+            end.setDate(end.getDate() + (durationWeeks * 7) - 1);
+            return end;
+        }
+
+        function setTime(date, timeStr) {
+            const [hours, minutes] = timeStr.split(':').map(Number);
+            const newDate = new Date(date);
+            newDate.setHours(hours, minutes, 0, 0);
+            return newDate;
+        }
+
+        function ensureWorkingDay(date, holidays) {
+            const result = new Date(date);
+            while (!isWorkingDay(result, holidays)) {
+                result.setDate(result.getDate() + 1);
+            }
+            return result;
+        }
+
+        // Ceremony generation
+        function generateSprintPlanning(releaseDate, sprintNum, config, holidays) {
+            const sprintStart = calculateSprintStart(releaseDate, config.durationWeeks);
+            let startTime = setTime(sprintStart, config.sprintPlanning.time);
+            startTime = ensureWorkingDay(startTime, holidays);
+            
+            const endTime = new Date(startTime);
+            endTime.setMinutes(endTime.getMinutes() + config.sprintPlanning.duration);
+            
+            return {
+                type: 'Sprint Planning',
+                title: `Sprint ${sprintNum} Planning`,
+                startDateTime: startTime,
+                endDateTime: endTime,
+                sprintNumber: sprintNum
+            };
+        }
+
+
+        function generateDailyStandup(releaseDate, sprintNum, config, holidays) {
+            const sprintStart = calculateSprintStart(releaseDate, config.durationWeeks);
+            const sprintEnd = calculateSprintEnd(sprintStart, config.durationWeeks);
+            const workingDays = getWorkingDays(sprintStart, sprintEnd, holidays);
+            
+            const firstDay = workingDays[0];
+            const startTime = setTime(firstDay, config.dailyStandup.time);
+            const endTime = new Date(startTime);
+            endTime.setMinutes(endTime.getMinutes() + config.dailyStandup.duration);
+            
+            return {
+                type: 'Daily Standup',
+                title: `Sprint ${sprintNum} Daily Standup`,
+                startDateTime: startTime,
+                endDateTime: endTime,
+                sprintNumber: sprintNum,
+                recurrence: {
+                    frequency: 'daily',
+                    until: sprintEnd,
+                    byDay: ['MO', 'TU', 'WE', 'TH', 'FR']
+                }
+            };
+        }
+
+        function generateSprintReview(releaseDate, sprintNum, config, holidays) {
+            const reviewDate = new Date(releaseDate);
+            reviewDate.setDate(reviewDate.getDate() - 2);
+            let startTime = setTime(reviewDate, config.sprintReview.time);
+            startTime = ensureWorkingDay(startTime, holidays);
+            
+            const endTime = new Date(startTime);
+            endTime.setMinutes(endTime.getMinutes() + config.sprintReview.duration);
+            
+            return {
+                type: 'Sprint Review',
+                title: `Sprint ${sprintNum} Review`,
+                startDateTime: startTime,
+                endDateTime: endTime,
+                sprintNumber: sprintNum
+            };
+        }
+
+
+        function generateSprintRetrospective(releaseDate, sprintNum, config, holidays) {
+            const reviewDate = new Date(releaseDate);
+            reviewDate.setDate(reviewDate.getDate() - 2);
+            
+            const dayAfterReview = new Date(reviewDate);
+            dayAfterReview.setDate(dayAfterReview.getDate() + 1);
+            
+            let startTime = setTime(dayAfterReview, config.sprintRetrospective.time);
+            startTime = ensureWorkingDay(startTime, holidays);
+            
+            const endTime = new Date(startTime);
+            endTime.setMinutes(endTime.getMinutes() + config.sprintRetrospective.duration);
+            
+            return {
+                type: 'Sprint Retrospective',
+                title: `Sprint ${sprintNum} Retrospective`,
+                startDateTime: startTime,
+                endDateTime: endTime,
+                sprintNumber: sprintNum
+            };
+        }
+
+        function generateAllCeremonies(year, numSprints, config, holidays) {
+            const ceremonies = [];
+            
+            for (let i = 0; i < numSprints; i++) {
+                const month = (i % 12) + 1;
+                const adjustedYear = year + Math.floor(i / 12);
+                const releaseDate = calculateThirdSaturday(adjustedYear, month);
+                const sprintNum = i + 1;
+                
+                ceremonies.push(generateSprintPlanning(releaseDate, sprintNum, config, holidays));
+                ceremonies.push(generateDailyStandup(releaseDate, sprintNum, config, holidays));
+                ceremonies.push(generateSprintReview(releaseDate, sprintNum, config, holidays));
+                ceremonies.push(generateSprintRetrospective(releaseDate, sprintNum, config, holidays));
+            }
+            
+            return ceremonies;
+        }
+
+
+        // iCalendar export
+        function formatICalDate(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const seconds = String(date.getSeconds()).padStart(2, '0');
+            return `${year}${month}${day}T${hours}${minutes}${seconds}`;
+        }
+
+        function escapeICalText(text) {
+            return text.replace(/\\/g, '\\\\').replace(/;/g, '\\;')
+                      .replace(/,/g, '\\,').replace(/\n/g, '\\n');
+        }
+
+        function generateVEvent(ceremony) {
+            let lines = ['BEGIN:VEVENT'];
+            lines.push(`UID:${Math.random().toString(36).substr(2, 9)}@scrum-scheduler`);
+            lines.push(`DTSTART:${formatICalDate(ceremony.startDateTime)}`);
+            lines.push(`DTEND:${formatICalDate(ceremony.endDateTime)}`);
+            lines.push(`SUMMARY:${escapeICalText(ceremony.title)}`);
+            lines.push(`DESCRIPTION:${escapeICalText(ceremony.type + ' ceremony')}`);
+            
+            if (ceremony.recurrence) {
+                const until = formatICalDate(ceremony.recurrence.until);
+                let rrule = `RRULE:FREQ=DAILY;UNTIL=${until}`;
+                if (ceremony.recurrence.byDay) {
+                    rrule += `;BYDAY=${ceremony.recurrence.byDay.join(',')}`;
+                }
+                lines.push(rrule);
+            }
+            
+            lines.push('END:VEVENT');
+            return lines.join('\r\n');
+        }
+
+
+        function exportToICalendar(ceremonies) {
+            let lines = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//Scrum Ceremony Scheduler//EN',
+                'CALSCALE:GREGORIAN',
+                'METHOD:PUBLISH'
+            ];
+            
+            ceremonies.forEach(ceremony => {
+                lines.push(generateVEvent(ceremony));
+            });
+            
+            lines.push('END:VCALENDAR');
+            return lines.join('\r\n');
+        }
+
+        // Validation
+        function validateYear(year) {
+            if (!year || year < 2020 || year > 2100) {
+                return 'Year must be between 2020 and 2100';
+            }
+            return null;
+        }
+
+        function validateNumSprints(num) {
+            if (!num || num < 1 || num > 24) {
+                return 'Number of sprints must be between 1 and 24';
+            }
+            return null;
+        }
+
+        function validateTime(time) {
+            const timeRegex = /^([0-1][0-9]|2[0-3]):([0-5][0-9])$/;
+            if (!timeRegex.test(time)) {
+                return 'Time must be in HH:MM format (e.g., 09:30)';
+            }
+            return null;
+        }
+
+
+        function validateHolidays(holidayStr) {
+            if (!holidayStr.trim()) return null;
+            
+            const dates = holidayStr.split(',').map(s => s.trim());
+            const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+            
+            for (const date of dates) {
+                if (!dateRegex.test(date)) {
+                    return `Invalid date format: ${date}. Use YYYY-MM-DD`;
+                }
+            }
+            return null;
+        }
+
+        function parseHolidays(holidayStr) {
+            if (!holidayStr.trim()) return [];
+            return holidayStr.split(',').map(s => new Date(s.trim()));
+        }
+
+        // UI Functions
+        function showError(fieldId, message) {
+            const errorEl = document.getElementById(`${fieldId}-error`);
+            if (errorEl) {
+                errorEl.textContent = message || '';
+            }
+        }
+
+        function getConfig() {
+            return {
+                year: parseInt(document.getElementById('year').value),
+                durationWeeks: parseInt(document.querySelector('input[name="sprintDuration"]:checked').value),
+                numSprints: parseInt(document.getElementById('numSprints').value),
+                sprintPlanning: {
+                    time: document.getElementById('sp-time').value,
+                    duration: parseInt(document.getElementById('sp-duration').value)
+                },
+                dailyStandup: {
+                    time: document.getElementById('ds-time').value,
+                    duration: parseInt(document.getElementById('ds-duration').value)
+                },
+                sprintReview: {
+                    time: document.getElementById('sr-time').value,
+                    duration: parseInt(document.getElementById('sr-duration').value)
+                },
+                sprintRetrospective: {
+                    time: document.getElementById('sret-time').value,
+                    duration: parseInt(document.getElementById('sret-duration').value)
+                },
+                holidays: document.getElementById('holidays').value
+            };
+        }
+
+
+        function validateForm() {
+            const config = getConfig();
+            let isValid = true;
+            
+            const yearError = validateYear(config.year);
+            showError('year', yearError);
+            if (yearError) isValid = false;
+            
+            const sprintsError = validateNumSprints(config.numSprints);
+            showError('numSprints', sprintsError);
+            if (sprintsError) isValid = false;
+            
+            const holidaysError = validateHolidays(config.holidays);
+            showError('holidays', holidaysError);
+            if (holidaysError) isValid = false;
+            
+            return isValid;
+        }
+
+        let currentCeremonies = [];
+
+        function renderPreview(ceremonies) {
+            const preview = document.getElementById('preview');
+            
+            if (!ceremonies || ceremonies.length === 0) {
+                preview.innerHTML = '<div class="empty-state"><p>No ceremonies to display</p></div>';
+                return;
+            }
+            
+            const bySprint = {};
+            ceremonies.forEach(c => {
+                if (!bySprint[c.sprintNumber]) {
+                    bySprint[c.sprintNumber] = [];
+                }
+                bySprint[c.sprintNumber].push(c);
+            });
+            
+            let html = '';
+            Object.keys(bySprint).sort((a, b) => a - b).forEach(sprintNum => {
+                html += `<div class="sprint-group"><h3>Sprint ${sprintNum}</h3>`;
+                
+                bySprint[sprintNum].sort((a, b) => a.startDateTime - b.startDateTime).forEach(ceremony => {
+                    const date = ceremony.startDateTime.toLocaleDateString();
+                    const time = ceremony.startDateTime.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+                    const duration = (ceremony.endDateTime - ceremony.startDateTime) / 60000;
+                    
+                    html += `<div class="ceremony-item">
+                        <div class="ceremony-title">${ceremony.title}</div>
+                        <div class="ceremony-details">
+                            📅 ${date} at ${time} | ⏱️ ${duration} min
+                            ${ceremony.recurrence ? ' | 🔄 Recurring daily (weekdays)' : ''}
+                        </div>
+                    </div>`;
+                });
+                
+                html += '</div>';
+            });
+            
+            preview.innerHTML = html;
+        }
+
+
+        function handlePreview() {
+            if (!validateForm()) return;
+            
+            const config = getConfig();
+            const holidays = parseHolidays(config.holidays);
+            
+            currentCeremonies = generateAllCeremonies(
+                config.year,
+                config.numSprints,
+                config,
+                holidays
+            );
+            
+            renderPreview(currentCeremonies);
+            document.getElementById('downloadBtn').disabled = false;
+        }
+
+        function handleDownload() {
+            if (currentCeremonies.length === 0) return;
+            
+            const config = getConfig();
+            const icalContent = exportToICalendar(currentCeremonies);
+            const blob = new Blob([icalContent], { type: 'text/calendar;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `ceremonies-${config.year}.ics`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+            
+            const successMsg = document.getElementById('successMessage');
+            successMsg.classList.add('show');
+            setTimeout(() => successMsg.classList.remove('show'), 3000);
+        }
+
+        function handleReset() {
+            document.getElementById('year').value = '2026';
+            document.querySelector('input[name="sprintDuration"][value="2"]').checked = true;
+            document.getElementById('numSprints').value = '6';
+            document.getElementById('sp-time').value = '10:00';
+            document.getElementById('sp-duration').value = '120';
+            document.getElementById('ds-time').value = '09:30';
+            document.getElementById('ds-duration').value = '15';
+            document.getElementById('sr-time').value = '14:00';
+            document.getElementById('sr-duration').value = '60';
+            document.getElementById('sret-time').value = '15:00';
+            document.getElementById('sret-duration').value = '45';
+            document.getElementById('holidays').value = '';
+            
+            showError('year', '');
+            showError('numSprints', '');
+            showError('holidays', '');
+            
+            currentCeremonies = [];
+            document.getElementById('preview').innerHTML = '<div class="empty-state"><p>Click "Preview" to see your ceremony schedule</p></div>';
+            document.getElementById('downloadBtn').disabled = true;
+        }
+
+
+        // Event listeners
+        document.getElementById('previewBtn').addEventListener('click', handlePreview);
+        document.getElementById('downloadBtn').addEventListener('click', handleDownload);
+        document.getElementById('resetBtn').addEventListener('click', handleReset);
+        
+        // Real-time validation
+        document.getElementById('year').addEventListener('input', () => {
+            const year = parseInt(document.getElementById('year').value);
+            showError('year', validateYear(year));
+        });
+        
+        document.getElementById('numSprints').addEventListener('input', () => {
+            const num = parseInt(document.getElementById('numSprints').value);
+            showError('numSprints', validateNumSprints(num));
+        });
+        
+        document.getElementById('holidays').addEventListener('input', () => {
+            const holidays = document.getElementById('holidays').value;
+            showError('holidays', validateHolidays(holidays));
+        });
+    </script>
+</body>
+</html>
